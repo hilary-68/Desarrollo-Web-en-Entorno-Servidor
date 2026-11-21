@@ -1,0 +1,13 @@
+<h3>Ingresa a tu cuenta</h3>
+<p th:if="${error}" th:text="${error}"></p>
+<form th:action="@{/login}" th:object="${usuario}" method="post">
+    <p>
+        Nombre de usuario:
+        <input type="text" th:field="*{nombre}" required />
+    </p>
+    <p>
+        Contraseña:
+        <input type="password" th:field="*{contraseña}" required />
+    </p>
+    <button type="submit">Ingresar</button>
+</form>

@@ -1,0 +1,10 @@
+<h3 th:text="'Bienvenido '+ ${usuario.nombre}"> </h3>
+<p>Estás en <strong th:text="${paginaActual}">inicio</strong></p>
+
+<nav>
+    <ul>
+        <li th:if="${paginaActual != 'Inicio'}"><a th:href="@{/}">Ir a Inicio</a></li>
+        <li th:if="${paginaActual != 'Pagina1'}"><a th:href="@{/pagina1}">Ir a Página 1</a></li>
+        <li th:if="${paginaActual != 'Pagina2'}"><a th:href="@{/pagina2}">Ir a Página 2</a></li>
+    </ul>
+</nav>
